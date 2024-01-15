@@ -37,7 +37,7 @@ app.use(cors({
 
   app.get("/", (req, res) => {
     res.send(
-      `<h1>Server is Working : click <a heref=${process.env.FRONTEND_URL}>Here</a>to Visit Frontend</h1>`
+      `<h1>Server is Working : click <a href=${process.env.FRONTEND_URL}>Here </a> to Visit Frontend</h1>`
     );
   });
   
