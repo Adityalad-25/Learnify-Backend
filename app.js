@@ -22,6 +22,14 @@ app.use(cors({
 }));
 
 
+app.get("/", (req, res) => {
+  res.send(
+    `<h1>Server is Working : click <a href=${process.env.FRONTEND_URL}>Here </a> to Visit Frontend</h1>`
+  );
+});
+
+
+
 // importing and using  routes 
  import course from './routes/courseRoutes.js';
  import user from './routes/userRoutes.js';
@@ -34,13 +42,6 @@ app.use(cors({
   app.use('/api/v1', payment);
   app.use('/api/v1', other);
 
-
-  app.get("/", (req, res) => {
-    res.send(
-      `<h1>Server is Working : click <a href=${process.env.FRONTEND_URL}>Here </a> to Visit Frontend</h1>`
-    );
-  });
-  
 
 
 
